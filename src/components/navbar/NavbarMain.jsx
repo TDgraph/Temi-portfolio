@@ -27,13 +27,15 @@ const NavbarMain = () => {
          <NavbarLogo />
 
          {/* Handling menu using js expression */}
-         <div className={'${menuOpen ? "sm:block" : "sm:hidden"} lg:block'}>
+         <div className={`transition-all duration-300 ease-in-out overflow-hidden lg:block ${
+          menuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <NavbarLinks />
-         </div>
+        </div>
+
 
          <NavbarBtn />
      </div>
-     <div className='flex lg:hidden sm:block p-6 bg-black items-center rounded-full border-[0.5px] border-orange '>
+     <div className='lg:hidden flex sm:block p-6 bg-black items-center rounded-full border-[0.5px] border-orange '>
 
       {/* Handling the hamburger button */}
       <button className='text-2xl p-3 border border-orange rounded-full text-white' onClick={toggleMenu}>
