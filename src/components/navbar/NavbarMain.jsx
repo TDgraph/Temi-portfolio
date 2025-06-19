@@ -32,7 +32,6 @@ const NavbarMain = () => {
           <NavbarLinks />
         </div>
 
-
          <NavbarBtn />
      </div>
      <div className='lg:hidden flex sm:block p-6 bg-black items-center rounded-full border-[0.5px] border-orange '>
